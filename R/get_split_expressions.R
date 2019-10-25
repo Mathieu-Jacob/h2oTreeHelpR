@@ -83,9 +83,9 @@ get_split_expressions <- function(h2o_tree_R) {
   # Section 1. Split edges text by | delimiter ----
   #----------------------------------------------------------------------------#
 
-  left_split_values <- strsplit(h2o_tree_R$left_split_levels, '\\|')
+  left_split_values <- strsplit(as.character(h2o_tree_R$left_split_levels), '\\|')
 
-  right_split_values <- strsplit(h2o_tree_R$right_split_levels, '\\|')
+  right_split_values <- strsplit(as.character(h2o_tree_R$right_split_levels), '\\|')
 
   #----------------------------------------------------------------------------#
   # Section 2. Determine which split NAs take ----
